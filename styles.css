@@ -1,0 +1,36 @@
+/* .kode-mono-text {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+body {
+    font-family: "Kode Mono", monospace;
+    font-style: normal;
+    background-color: #201d1d;
+}
+
+.gradient-background {
+    background: linear-gradient(0deg, rgb(98, 98, 180), rgb(101, 52, 147), rgb(74, 27, 123));
+}
+
+.main-body {
+    display: flex;
+    width: 300px;
+    height: 600px;
+    margin: auto;
+    flex-direction: column;
+    /* background: rgb(98, 98, 180); */
+}
+
+.score-counter {
+    text-align: center;
+    color: #c86060;
+}
+
+.game-body {
+    border: #e8ff16 solid 2px;
+    height: 515px;
+    width: 296px;
+}
