@@ -71,13 +71,15 @@ function update() {
     context.fillRect(ball.x, ball.y, ball.width, ball.height);
 
     //ball hits player paddle
-    if (player.x < (ball.x + ball.width / 2) && (ball.x + ball.width / 2) < (player.x + player.width) && player.y <= (ball.y + ball.height) && (ball.y + ball.height) <= (player.y + player.height)) {
+    if (player.x < (ball.x + Math.floor(ball.width / 2)) && (ball.x + Math.floor(ball.width / 2)) < (player.x + player.width) && player.y <= (ball.y + ball.height) && (ball.y + ball.height) <= (player.y + player.height)) {
+        console.log('player - ', player);
+        console.log('ball - ', ball);
         scoreUp();
     }
 
     //slider
     player.x = parseInt(slider.value);
-    console.log(slider.value);
+    // console.log(slider.value);
 }
 
 // function outOfBound(xPosition) {
@@ -120,6 +122,8 @@ function gameStart() {
     if (this.textContent == 'Start') {
         moveBall();
     }
+    ballVelocityX = 1;
+    ballVelocityY = 1;
 }
 
 function gameOver() {
@@ -145,6 +149,9 @@ function scoreUp() {
     score += 1;
     scoreDiv.textContent = 'Score : ' + score;
     ball.velocityY = -ball.velocityY;
-    console.log('player -', player.x, '-', player.x + player.width);
-    console.log('ball -', ball.x);
+
+    ball.velocityX += (ball.velocityX / Math.abs(ball.velocityX)) * ballVelocityX * (1 / 10);
+    console.log(ball.velocityX);
+    ball.velocityY += (ball.velocityY / Math.abs(ball.velocityY)) * ballVelocityY * (1 / 10);
+    console.log(ball.velocityY);
 }
