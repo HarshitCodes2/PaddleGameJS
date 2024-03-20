@@ -76,7 +76,7 @@ function update() {
     }
 
     //slider
-    player.x = slider.value;
+    player.x = parseInt(slider.value);
     console.log(slider.value);
 }
 
