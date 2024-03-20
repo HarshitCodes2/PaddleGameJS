@@ -122,8 +122,8 @@ function gameStart() {
     if (this.textContent == 'Start') {
         moveBall();
     }
-    ballVelocityX = 1.3;
-    ballVelocityY = 1.6;
+    ballVelocityX = 1.1;
+    ballVelocityY = 1.2;
 }
 
 function gameOver() {
