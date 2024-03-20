@@ -71,7 +71,7 @@ function update() {
     context.fillRect(ball.x, ball.y, ball.width, ball.height);
 
     //ball hits player paddle
-    if (player.x < ball.x && ball.x < player.x + player.width && player.y <= ball.y + ball.height && ball.y + ball.height <= player.y + player.height) {
+    if (player.x < (ball.x + ball.width / 2) && (ball.x + ball.width / 2) < (player.x + player.width) && player.y <= (ball.y + ball.height) && (ball.y + ball.height) <= (player.y + player.height)) {
         scoreUp();
     }
 
