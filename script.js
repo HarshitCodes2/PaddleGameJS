@@ -145,4 +145,6 @@ function scoreUp() {
     score += 1;
     scoreDiv.textContent = 'Score : ' + score;
     ball.velocityY = -ball.velocityY;
+    console.log('player -', player.x, '-', player.x + player.width);
+    console.log('ball -', ball.x);
 }
